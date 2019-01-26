@@ -1,5 +1,6 @@
 import json
 import os
+import shutil
 from selenium import webdriver
 import selenium.common
 import time
@@ -34,7 +35,8 @@ class Upload(object):
     @staticmethod
     def remove_filelist(file_list):
         for r in file_list:
-            os.remove(r)
+            shutil.move(r,'live')
+            #os.remove(r)
             logger.info('删除-' + r)
 
     def filter_file(self):
@@ -43,7 +45,7 @@ class Upload(object):
             return False
         for r in file_list:
             file_size = os.path.getsize(r) / 1024 / 1024 / 1024
-            if file_size <= 0.02:
+            if file_size <= 0.01:
                 os.remove(r)
                 logger.info('过滤删除-' + r)
         file_list = self.file_list
@@ -82,16 +84,19 @@ class Upload(object):
 
         filename = 'engine/bilibili.cookie'
         # title_ = self.r_title
-        videopath = self.assemble_videopath(file_list)
 
+        videopath = self.assemble_videopath(file_list)
         # service_log_path = "{}/chromedriver.log".format('/home')
         options = webdriver.ChromeOptions()
-
-        options.add_argument('headless')
-        driver = webdriver.Chrome(executable_path=engine.chromedrive_path, chrome_options=options)
+        options.add_argument('--headless')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-extensions')
+        options.add_argument('--disable-gpu')
+        driver = webdriver.Chrome(chrome_options=options)
         # service_log_path=service_log_path)
+        logger.info('try1')
         try:
-
+            # logger.info('try2')
             driver.get("https://www.bilibili.com")
             # driver.delete_all_cookies()
             if os.path.isfile(filename):
@@ -111,7 +116,8 @@ class Upload(object):
 
             # print(driver.title)
 
-            # logger.info(driver.title)
+            # logger.info('driver.title' + driver.title)
+			# logger.info(driver.title)
 
             upload.send_keys(videopath)  # send_keys
             logger.info('开始上传' + title_)
@@ -191,9 +197,7 @@ class Upload(object):
             # 简介
             text_2 = driver.find_element_by_xpath(
                 '//*[@class="upload-v2-container"]/div[2]/div[3]/div[1]/div[12]/div[2]/div/textarea')
-            text_2.send_keys('职业选手直播第一视角录像。这个自动录制上传的小程序开源在Github：'
-                             'http://t.cn/RgapTpf(或者在Github搜索ForgQi)交流群：837362626'
-                             '\n顺便推广一下自己的网站http://web-form.me/')
+            text_2.send_keys('7*24测试。程序运行在 MI PAD 4 上，使用了这个自动录制上传的小程序，开源在Github：http://t.cn/RgapTpf')
 
             driver.find_element_by_xpath('//*[@class="upload-v2-container"]/div[2]/div[3]/div[5]/span[1]').click()
             # screen_shot = driver.save_screenshot('bin/1.png')
@@ -201,7 +205,7 @@ class Upload(object):
             time.sleep(3)
             upload_success = driver.find_element_by_xpath(r'//*[@id="app"]/div/div[3]/h3').text
             if upload_success == '':
-                driver.save_screenshot('err.png')
+                driver.save_screenshot(str(time.time())[:10]+'err.png')
                 logger.info('稿件提交失败，截图记录')
                 return
             else:
@@ -239,8 +243,8 @@ class Upload(object):
                 logger.info('更新cookie成功')
             else:
                 logger.info('更新cookie失败')
-        # except:
-        #     logger.exception('未知错误')
+        except:
+            logger.exception('未知错误')
         finally:
             driver.quit()
             logger.info('浏览器驱动退出')
@@ -248,7 +252,8 @@ class Upload(object):
     def start(self, url, date=None):
         title = self.title
         if date:
-            title = str(date) + self.title
+            title = '[直播录像' + str(date) + ']' + self.title
+            #title = str(date) + self.title
         if self.filter_file():
             logger.info('准备上传' + title)
             self.upload(title, self.file_list, link=url)

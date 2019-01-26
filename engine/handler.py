@@ -23,9 +23,10 @@ def process(name, url, mod):
             p.start()
             p.join()
             # download(name, url)
-            Upload(name).start(url, now)
+            # Upload(name).start(url, now)
         elif mod == 'up':
-            Upload(name).start(url, now)
+            if (int(common.time_now2())>2 and int(common.time_now2())<12):
+                Upload(name).start(url, now)
         else:
             return url
     finally:

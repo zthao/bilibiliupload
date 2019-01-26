@@ -77,8 +77,10 @@ class Daemon(object):
 
         if pid:
             message = 'pidfile %s already exist. Daemon already running!\n'
-            sys.stderr.write(message % self.pidfile)
-            sys.exit(1)
+            self.restart()
+            message = 'restart'
+            #sys.stderr.write(message % self.pidfile)
+            #sys.exit(1)
 
         # 启动监控
         self._daemonize()

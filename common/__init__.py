@@ -21,8 +21,16 @@ logger = logging.getLogger('log01')
 def time_now():
     utc_dt = datetime.utcnow().replace(tzinfo=timezone.utc)
     bj_dt = utc_dt.astimezone(timezone(timedelta(hours=8)))
+    if (int(bj_dt.strftime('%H'))<8):
+        bj_dt = bj_dt + timedelta(days=-1)
     # now = bj_dt.strftime('%Y{0}%m{1}%d{2}').format(*'...')
     now = bj_dt.strftime('%Y{0}%m{1}%d').format(*'..')
+    return now
+	
+def time_now2():
+    utc_dt = datetime.utcnow().replace(tzinfo=timezone.utc)
+    bj_dt = utc_dt.astimezone(timezone(timedelta(hours=8)))
+    now = bj_dt.strftime('%H').format(*'..')
     return now
 
 
