@@ -1,0 +1,260 @@
+python 上传视频 bilibili
+
+
+https://member.bilibili.com/video/upload.html
+curl 'https://member.bilibili.com/video/upload.html' -H 'Connection: keep-alive' -H 'Upgrade-Insecure-Requests: 1' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36' -H 'DNT: 1' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: zh-CN,zh;q=0.9,ja;q=0.8' -H 'Cookie: buvid3=82C1C3DA-E04E-4196-9C92-D158B2BCE0F748371infoc; fts=1532601509; sid=9steqb21; LIVE_BUVID=65efc7aa888f70dfb641d454a0d0dfef; LIVE_BUVID__ckMd5=cf2fe31dd841eab2; im_notify_type_14009112=0; DedeUserID=14009112; DedeUserID__ckMd5=b7732b92ab6edfd2; SESSDATA=eb057f05%2C1550562151%2Cb263b711; bili_jct=5fff0f7a638c94e1d5739093425a7c48; stardustvideo=1; CURRENT_FNVAL=16; rpdid=oqmplikikodospmlmwoqw; CURRENT_QUALITY=0; finger=edc6ecda; bp_t_offset_14009112=211444349538933890; _dfcaptcha=61f4f9e8f038e52130e580df0bf13709' --compressed
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,ja;q=0.8
+Connection: keep-alive
+Cookie: buvid3=82C1C3DA-E04E-4196-9C92-D158B2BCE0F748371infoc; fts=1532601509; sid=9steqb21; LIVE_BUVID=65efc7aa888f70dfb641d454a0d0dfef; LIVE_BUVID__ckMd5=cf2fe31dd841eab2; im_notify_type_14009112=0; DedeUserID=14009112; DedeUserID__ckMd5=b7732b92ab6edfd2; SESSDATA=eb057f05%2C1550562151%2Cb263b711; bili_jct=5fff0f7a638c94e1d5739093425a7c48; stardustvideo=1; CURRENT_FNVAL=16; rpdid=oqmplikikodospmlmwoqw; CURRENT_QUALITY=0; finger=edc6ecda; bp_t_offset_14009112=211444349538933890; _dfcaptcha=61f4f9e8f038e52130e580df0bf13709
+DNT: 1
+Host: member.bilibili.com
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+
+
+
+curl 'https://member.bilibili.com/preupload?name=20180816_115821.flv&size=17956877&r=upos&profile=ugcupos%2Fbup&ssl=0&os=upos&upcdn=ws&version=2.4.2' -H 'DNT: 1' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: zh-CN,zh;q=0.9,ja;q=0.8' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36' -H 'Accept: */*' -H 'Referer: https://member.bilibili.com/video/upload.html' -H 'Cookie: buvid3=82C1C3DA-E04E-4196-9C92-D158B2BCE0F748371infoc; fts=1532601509; sid=9steqb21; LIVE_BUVID=65efc7aa888f70dfb641d454a0d0dfef; LIVE_BUVID__ckMd5=cf2fe31dd841eab2; im_notify_type_14009112=0; DedeUserID=14009112; DedeUserID__ckMd5=b7732b92ab6edfd2; SESSDATA=eb057f05%2C1550562151%2Cb263b711; bili_jct=5fff0f7a638c94e1d5739093425a7c48; stardustvideo=1; CURRENT_FNVAL=16; rpdid=oqmplikikodospmlmwoqw; CURRENT_QUALITY=0; finger=edc6ecda; bp_t_offset_14009112=211444349538933890; _dfcaptcha=b5b9a202396b310de0c4e64fac3543cd' -H 'Connection: keep-alive' --compressed
+
+Request URL: https://member.bilibili.com/preupload?name=20180816_115821.flv&size=17956877&r=upos&profile=ugcupos%2Fbup&ssl=0&os=upos&upcdn=ws&version=2.4.2
+Request Method: GET
+Status Code: 200 OK
+Remote Address: 120.92.113.99:443
+Referrer Policy: no-referrer-when-downgrade
+
+Request URL: https://member.bilibili.com/preupload?name=[文件名]&size=[文件大小]&r=upos&profile=ugcupos%2Fbup&ssl=0&os=upos&upcdn=ws&version=2.4.2
+
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,ja;q=0.8
+Connection: keep-alive
+Cookie: buvid3=82C1C3DA-E04E-4196-9C92-D158B2BCE0F748371infoc; fts=1532601509; sid=9steqb21; LIVE_BUVID=65efc7aa888f70dfb641d454a0d0dfef; LIVE_BUVID__ckMd5=cf2fe31dd841eab2; im_notify_type_14009112=0; DedeUserID=14009112; DedeUserID__ckMd5=b7732b92ab6edfd2; SESSDATA=eb057f05%2C1550562151%2Cb263b711; bili_jct=5fff0f7a638c94e1d5739093425a7c48; stardustvideo=1; CURRENT_FNVAL=16; rpdid=oqmplikikodospmlmwoqw; CURRENT_QUALITY=0; finger=edc6ecda; bp_t_offset_14009112=211444349538933890; _dfcaptcha=b5b9a202396b310de0c4e64fac3543cd
+DNT: 1
+Host: member.bilibili.com
+Referer: https://member.bilibili.com/video/upload.html
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+
+{"upos_uri":"upos:\/\/ugc\/m190122wscdly8hkx1nrc225u45pnss2.flv","biz_id":72742744,"endpoint":"\/\/upos-sz-upcdnws.acgvideo.com","endpoints":["\/\/upos-sz-upcdnws.acgvideo.com","\/\/upos-sz-upcdnws.acgvideo.com"],"chunk_retry_delay":3,"chunk_retry":200,"chunk_size":4194304,"threads":2,"timeout":900,"auth":"os=upos&cdn=upcdnws&uid=14009112&net_state=4&device=&build=&os_version=&ak=1494471752&timestamp=1548162120&sign=c27a2457f3303b08746e215058e6eca9","uip":"121.69.87.246","OK":1}
+
+{upos_uri: "upos://ugc/m190122wscdly8hkx1nrc225u45pnss2.flv", biz_id: 72742744,…}
+OK: 1
+auth: "os=upos&cdn=upcdnws&uid=14009112&net_state=4&device=&build=&os_version=&ak=1494471752&timestamp=1548162120&sign=c27a2457f3303b08746e215058e6eca9"
+biz_id: 72742744
+chunk_retry: 200
+chunk_retry_delay: 3
+chunk_size: 4194304
+endpoint: "//upos-sz-upcdnws.acgvideo.com"
+endpoints: ["//upos-sz-upcdnws.acgvideo.com", "//upos-sz-upcdnws.acgvideo.com"]
+0: "//upos-sz-upcdnws.acgvideo.com"
+1: "//upos-sz-upcdnws.acgvideo.com"
+threads: 2
+timeout: 900
+uip: "121.69.87.246"
+upos_uri: "upos://ugc/m190122wscdly8hkx1nrc225u45pnss2.flv"
+
+
+
+curl 'https://upos-sz-upcdnws.acgvideo.com/ugc/m190122wscdly8hkx1nrc225u45pnss2.flv?uploads&output=json' -X OPTIONS -H 'Access-Control-Request-Method: POST' -H 'Origin: https://member.bilibili.com' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36' -H 'DNT: 1' -H 'Access-Control-Request-Headers: x-upos-auth' --compressed
+
+Provisional headers are shown
+Access-Control-Request-Headers: x-upos-auth
+Access-Control-Request-Method: POST
+DNT: 1
+Origin: https://member.bilibili.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+
+
+
+
+curl 'https://upos-sz-upcdnws.acgvideo.com/ugc/m190122wscdly8hkx1nrc225u45pnss2.flv?uploads&output=json' -X POST -H 'Referer: https://member.bilibili.com/video/upload.html' -H 'Origin: https://member.bilibili.com' -H 'X-Upos-Auth: os=upos&cdn=upcdnws&uid=14009112&net_state=4&device=&build=&os_version=&ak=1494471752&timestamp=1548162120&sign=c27a2457f3303b08746e215058e6eca9' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36' -H 'DNT: 1' --compressed
+
+Provisional headers are shown
+DNT: 1
+Origin: https://member.bilibili.com
+Referer: https://member.bilibili.com/video/upload.html
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+X-Upos-Auth: os=upos&cdn=upcdnws&uid=14009112&net_state=4&device=&build=&os_version=&ak=1494471752&timestamp=1548162120&sign=c27a2457f3303b08746e215058e6eca9
+
+os=upos
+cdn=upcdnws
+uid=14009112
+net_state=4
+device=
+build=
+os_version=
+ak=1494471752
+timestamp=1548162120
+sign=c27a2457f3303b08746e215058e6eca9
+
+{"upload_id":"c53aa79cfcd89175c3efcd18bbd4cab7","key":"\/m190122wscdly8hkx1nrc225u45pnss2.flv","OK":1,"bucket":"ugc"}
+OK: 1
+bucket: "ugc"
+key: "/m190122wscdly8hkx1nrc225u45pnss2.flv"
+upload_id: "c53aa79cfcd89175c3efcd18bbd4cab7"
+
+
+
+curl 'https://upos-sz-upcdnws.acgvideo.com/ugc/m190122wscdly8hkx1nrc225u45pnss2.flv?partNumber=1&uploadId=c53aa79cfcd89175c3efcd18bbd4cab7&chunk=0&chunks=5&size=4194304&start=0&end=4194304&total=17956877' -X OPTIONS -H 'Access-Control-Request-Method: PUT' -H 'Origin: https://member.bilibili.com' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36' -H 'DNT: 1' -H 'Access-Control-Request-Headers: x-upos-auth' --compressed
+
+Provisional headers are shown
+Access-Control-Request-Headers: x-upos-auth
+Access-Control-Request-Method: PUT
+DNT: 1
+Origin: https://member.bilibili.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+
+partNumber: 1
+uploadId: c53aa79cfcd89175c3efcd18bbd4cab7
+chunk: 0
+chunks: 5
+size: 4194304
+start: 0
+end: 4194304
+total: 17956877
+
+
+
+
+curl 'https://upos-sz-upcdnws.acgvideo.com/ugc/m190122wscdly8hkx1nrc225u45pnss2.flv?partNumber=1&uploadId=c53aa79cfcd89175c3efcd18bbd4cab7&chunk=0&chunks=5&size=4194304&start=0&end=4194304&total=17956877' -X PUT -H 'Referer: https://member.bilibili.com/video/upload.html' -H 'Origin: https://member.bilibili.com' -H 'X-Upos-Auth: os=upos&cdn=upcdnws&uid=14009112&net_state=4&device=&build=&os_version=&ak=1494471752&timestamp=1548162120&sign=c27a2457f3303b08746e215058e6eca9' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36' -H 'DNT: 1' --data-binary ...........
+
+DNT: 1
+Origin: https://member.bilibili.com
+Referer: https://member.bilibili.com/video/upload.html
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+X-Upos-Auth: os=upos&cdn=upcdnws&uid=14009112&net_state=4&device=&build=&os_version=&ak=1494471752&timestamp=1548162120&sign=c27a2457f3303b08746e215058e6eca9
+
+
+
+
+
+
+curl 'https://upos-sz-upcdnws.acgvideo.com/ugc/m190122wscdly8hkx1nrc225u45pnss2.flv?output=json&name=20180816_115821.flv&profile=ugcupos%2Fbup&uploadId=c53aa79cfcd89175c3efcd18bbd4cab7&biz_id=72742744' -X OPTIONS -H 'Access-Control-Request-Method: POST' -H 'Origin: https://member.bilibili.com' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36' -H 'DNT: 1' -H 'Access-Control-Request-Headers: content-type,x-upos-auth' --compressed
+
+Provisional headers are shown
+Access-Control-Request-Headers: content-type,x-upos-auth
+Access-Control-Request-Method: POST
+DNT: 1
+Origin: https://member.bilibili.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+
+output: json
+name: 20180816_115821.flv
+profile: ugcupos/bup
+uploadId: c53aa79cfcd89175c3efcd18bbd4cab7
+biz_id: 72742744
+
+
+
+
+
+curl 'https://upos-sz-upcdnws.acgvideo.com/ugc/m190122wscdly8hkx1nrc225u45pnss2.flv?output=json&name=20180816_115821.flv&profile=ugcupos%2Fbup&uploadId=c53aa79cfcd89175c3efcd18bbd4cab7&biz_id=72742744' -H 'Referer: https://member.bilibili.com/video/upload.html' -H 'Origin: https://member.bilibili.com' -H 'X-Upos-Auth: os=upos&cdn=upcdnws&uid=14009112&net_state=4&device=&build=&os_version=&ak=1494471752&timestamp=1548162120&sign=c27a2457f3303b08746e215058e6eca9' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36' -H 'DNT: 1' -H 'Content-Type: application/json; charset=UTF-8' --data-binary '{"parts":[{"partNumber":4,"eTag":"etag"},{"partNumber":5,"eTag":"etag"},{"partNumber":1,"eTag":"etag"},{"partNumber":2,"eTag":"etag"},{"partNumber":3,"eTag":"etag"}]}' --compressed
+
+Content-Type: application/json; charset=UTF-8
+DNT: 1
+Origin: https://member.bilibili.com
+Referer: https://member.bilibili.com/video/upload.html
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+X-Upos-Auth: os=upos&cdn=upcdnws&uid=14009112&net_state=4&device=&build=&os_version=&ak=1494471752&timestamp=1548162120&sign=c27a2457f3303b08746e215058e6eca9
+
+
+output: json
+name: 20180816_115821.flv
+profile: ugcupos/bup
+uploadId: c53aa79cfcd89175c3efcd18bbd4cab7
+biz_id: 72742744
+
+{"bucket":"ugc","etag":"17956877","OK":1,"key":"\/m190122wscdly8hkx1nrc225u45pnss2.flv","location":"ugc\/m190122wscdly8hkx1nrc225u45pnss2.flv"}
+OK: 1
+bucket: "ugc"
+etag: "17956877"
+key: "/m190122wscdly8hkx1nrc225u45pnss2.flv"
+location: "ugc/m190122wscdly8hkx1nrc225u45pnss2.flv"
+
+
+
+
+
+
+
+
+
+
+curl 'https://member.bilibili.com/x/geetest/pre/add' -H 'DNT: 1' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: zh-CN,zh;q=0.9,ja;q=0.8' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36' -H 'Accept: application/json, text/plain, */*' -H 'Referer: https://member.bilibili.com/video/upload.html' -H 'Cookie: buvid3=82C1C3DA-E04E-4196-9C92-D158B2BCE0F748371infoc; fts=1532601509; sid=9steqb21; LIVE_BUVID=65efc7aa888f70dfb641d454a0d0dfef; LIVE_BUVID__ckMd5=cf2fe31dd841eab2; im_notify_type_14009112=0; DedeUserID=14009112; DedeUserID__ckMd5=b7732b92ab6edfd2; SESSDATA=eb057f05%2C1550562151%2Cb263b711; bili_jct=5fff0f7a638c94e1d5739093425a7c48; stardustvideo=1; CURRENT_FNVAL=16; rpdid=oqmplikikodospmlmwoqw; CURRENT_QUALITY=0; finger=edc6ecda; bp_t_offset_14009112=211444349538933890' -H 'Connection: keep-alive' --compressed
+
+Accept: application/json, text/plain, */*
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,ja;q=0.8
+Connection: keep-alive
+Cookie: buvid3=82C1C3DA-E04E-4196-9C92-D158B2BCE0F748371infoc; fts=1532601509; sid=9steqb21; LIVE_BUVID=65efc7aa888f70dfb641d454a0d0dfef; LIVE_BUVID__ckMd5=cf2fe31dd841eab2; im_notify_type_14009112=0; DedeUserID=14009112; DedeUserID__ckMd5=b7732b92ab6edfd2; SESSDATA=eb057f05%2C1550562151%2Cb263b711; bili_jct=5fff0f7a638c94e1d5739093425a7c48; stardustvideo=1; CURRENT_FNVAL=16; rpdid=oqmplikikodospmlmwoqw; CURRENT_QUALITY=0; finger=edc6ecda; bp_t_offset_14009112=211444349538933890
+DNT: 1
+Host: member.bilibili.com
+Referer: https://member.bilibili.com/video/upload.html
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+
+{"code":0,"message":"0","ttl":1,"data":{"success":0,"gt":"","challenge":"","new_captcha":0,"limit":{"add":false}}}
+code: 0
+data: {success: 0, gt: "", challenge: "", new_captcha: 0, limit: {add: false}}
+challenge: ""
+gt: ""
+limit: {add: false}
+add: false
+new_captcha: 0
+success: 0
+message: "0"
+ttl: 1
+
+
+
+curl 'https://member.bilibili.com/x/vu/web/add?csrf=5fff0f7a638c94e1d5739093425a7c48' -H 'Origin: https://member.bilibili.com' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: zh-CN,zh;q=0.9,ja;q=0.8' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36' -H 'Content-Type: application/json;charset=UTF-8' -H 'Accept: application/json, text/plain, */*' -H 'Referer: https://member.bilibili.com/video/upload.html' -H 'Cookie: buvid3=82C1C3DA-E04E-4196-9C92-D158B2BCE0F748371infoc; fts=1532601509; sid=9steqb21; LIVE_BUVID=65efc7aa888f70dfb641d454a0d0dfef; LIVE_BUVID__ckMd5=cf2fe31dd841eab2; im_notify_type_14009112=0; DedeUserID=14009112; DedeUserID__ckMd5=b7732b92ab6edfd2; SESSDATA=eb057f05%2C1550562151%2Cb263b711; bili_jct=5fff0f7a638c94e1d5739093425a7c48; stardustvideo=1; CURRENT_FNVAL=16; rpdid=oqmplikikodospmlmwoqw; CURRENT_QUALITY=0; finger=edc6ecda; bp_t_offset_14009112=211444349538933890' -H 'Connection: keep-alive' -H 'DNT: 1' --data-binary '{"copyright":2,"videos":[{"filename":"m190122wscdly8hkx1nrc225u45pnss2","title":"20180816_115821","desc":""}],"source":"https://live.bilibili.com/104","tid":171,"cover":"//upos-videocovers.acgvideo.com/m190122wscdly8hkx1nrc225u45pnss2_0001.jpg","title":"【live/104】毛毛打dota","tag":"dota","desc_format_id":38,"desc":"测试。这里是简介","dynamic":"#雀魂##dota#","dtime":1548874260,"subtitle":{"open":0,"lan":"zh-CN"}}' --compressed
+
+Accept: application/json, text/plain, */*
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,ja;q=0.8
+Connection: keep-alive
+Content-Length: 432
+Content-Type: application/json;charset=UTF-8
+Cookie: buvid3=82C1C3DA-E04E-4196-9C92-D158B2BCE0F748371infoc; fts=1532601509; sid=9steqb21; LIVE_BUVID=65efc7aa888f70dfb641d454a0d0dfef; LIVE_BUVID__ckMd5=cf2fe31dd841eab2; im_notify_type_14009112=0; DedeUserID=14009112; DedeUserID__ckMd5=b7732b92ab6edfd2; SESSDATA=eb057f05%2C1550562151%2Cb263b711; bili_jct=5fff0f7a638c94e1d5739093425a7c48; stardustvideo=1; CURRENT_FNVAL=16; rpdid=oqmplikikodospmlmwoqw; CURRENT_QUALITY=0; finger=edc6ecda; bp_t_offset_14009112=211444349538933890
+DNT: 1
+Host: member.bilibili.com
+Origin: https://member.bilibili.com
+Referer: https://member.bilibili.com/video/upload.html
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+
+
+
+{"copyright":2,"videos":[{"filename":"m190122wscdly8hkx1nrc225u45pnss2","title":"20180816_115821","desc":""}],"source":"https://live.bilibili.com/104","tid":171,"cover":"//upos-videocovers.acgvideo.com/m190122wscdly8hkx1nrc225u45pnss2_0001.jpg","title":"【live/104】毛毛打dota","tag":"dota","desc_format_id":0,"desc":"\"测试。这里是简介\"","dynamic":"#雀魂##dota#","dtime":1548874260,"subtitle":{"open":1,"lan":"zh-CN"}}
+
+copyright: 2#转载
+cover: "//upos-videocovers.acgvideo.com/m190122wscdly8hkx1nrc225u45pnss2_0001.jpg"#封面
+desc: "测试。这里是简介"#简介
+desc_format_id: 38#未知，数据来源是推荐标签
+dtime: 1548874260#定时发布
+dynamic: "#雀魂##dota#"#动态
+porder: {flow_id: 1, industry_id: 1, official: 0, show_type: ""}#商业声明
+source: "https://live.bilibili.com/104"#转载来源
+subtitle: {open: 0, lan: "zh-CN"}#更多选项
+lan: "zh-CN"#字幕语言
+open: 0#观众投字幕，0=F，1=T
+tag: "dota"#标签
+tid: 171#分区
+title: "【live/104】毛毛打dota"#标题
+videos: [{filename: "m190122wscdly8hkx1nrc225u45pnss2", title: "20180816_115821", desc: ""}]
+0: {filename: "m190122wscdly8hkx1nrc225u45pnss2", title: "20180816_115821", desc: ""}#分p
+desc: ""#未知
+filename: "m190122wscdly8hkx1nrc225u45pnss2"#视频文件名
+title: "20180816_115821"#分p标题
+
+tid: 171	desc_format_id: 38	游戏>电子竞技
+tid: 173	desc_format_id: 42	游戏>桌游棋牌
+tid: 65	desc_format_id: 33	游戏>网络游戏
+
+
+
+{"code":0,"message":"0","ttl":1,"data":{"aid":41428660}}code: 0
+data: {aid: 41428660}
+aid: 41428660
+message: "0"
+ttl: 1
+
